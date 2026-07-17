@@ -9,7 +9,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
+      - name: Check SONAR_TOKEN
+        run: |
+          if [ -z "${{ secrets.SONAR_TOKEN }}" ]; then
+            echo "SONAR_TOKEN is EMPTY"
+            exit 1
+          else
+            echo "SONAR_TOKEN exists"
+          fi
       - name: SonarQube Scan (by Maven)
         run: |
           mvn compile sonar:sonar -DskipTests \
@@ -17,7 +24,7 @@ jobs:
             -Dsonar.projectName="thing" \
             -Dsonar.projectKey=Ebrahimgad123_thing \
             -Dsonar.host.url=https://sonarcloud.io/ \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+            -Dsonar.token=${{ secrets.SONAR_TOKEN }}
 
 
       # - name: SonarQube Scan (by CLI)
