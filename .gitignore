@@ -1,12 +1,11 @@
-# .gitignore
-
 # Terraform
-
-terrform-code/.terraform
+terraform-code/.terraform/
+terraform-code/*.tfstate
 terraform-code/*.tfstate.*
 terraform-code/.terraform.lock.hcl
-terraform-code/.crash
+terraform-code/crash.log
 terraform-code/*.log
 terraform-code/*.backup
 
-
+# Maven
+target/
