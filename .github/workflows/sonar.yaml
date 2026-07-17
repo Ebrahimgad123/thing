@@ -25,6 +25,7 @@ jobs:
             -Dsonar.projectKey=Ebrahimgad123_thing \
             -Dsonar.host.url=https://sonarcloud.io/ \
             -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+###
 
 
       # - name: SonarQube Scan (by CLI)
