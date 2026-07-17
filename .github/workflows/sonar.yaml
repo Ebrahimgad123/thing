@@ -13,7 +13,7 @@ jobs:
       - name: SonarQube Scan (by Maven)
         run: |
           mvn compile sonar:sonar -DskipTests \
-            -Dsonar.organization=Ebrahimgad123 \
+            -Dsonar.organization=ebrahimgad123 \
             -Dsonar.projectName="thing" \
             -Dsonar.projectKey=Ebrahimgad123_thing \
             -Dsonar.host.url=https://sonarcloud.io/ \
