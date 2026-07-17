@@ -14,8 +14,8 @@ jobs:
         run: |
           mvn compile sonar:sonar -DskipTests \
             -Dsonar.organization=Ibrahim gad \
-            -Dsonar.projectName="ebrahimgad123" \
-            -Dsonar.projectKey=DeepikGit_Devsecops-cicd-pipeline \
+            -Dsonar.projectName="thing" \
+            -Dsonar.projectKey=Ebrahimgad123_thing \
             -Dsonar.host.url=https://sonarcloud.io/ \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
