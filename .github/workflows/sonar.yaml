@@ -13,18 +13,18 @@ jobs:
       - name: SonarQube Scan (by Maven)
         run: |
           mvn compile sonar:sonar -DskipTests \
-            -Dsonar.organization=deepikgit \
-            -Dsonar.projectName="DevSecOps Pipeline" \
+            -Dsonar.organization=Ibrahim gad \
+            -Dsonar.projectName="ebrahimgad123" \
             -Dsonar.projectKey=DeepikGit_Devsecops-cicd-pipeline \
             -Dsonar.host.url=https://sonarcloud.io/ \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
 
-      - name: SonarQube Scan (by CLI)
-        run: |
-          sonar-scanner \
-          -Dsonar.projectKey=DeepikGit_Devsecops-cicd-pipeline \
-          -Dsonar.organization=deepikgit \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-          -Dsonar.sources=src
+      # - name: SonarQube Scan (by CLI)
+      #   run: |
+      #     sonar-scanner \
+      #     -Dsonar.projectKey=DeepikGit_Devsecops-cicd-pipeline \
+      #     -Dsonar.organization=deepikgit \
+      #     -Dsonar.host.url=https://sonarcloud.io \
+      #     -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+      #     -Dsonar.sources=src
