@@ -1,3 +1,4 @@
+// The virtual private cloud 
 module "vpc" {
   source     = "./modules/vpc"
   vpc_name   = "onmo-vpc"
@@ -11,7 +12,6 @@ module "public_subnet_01" {
   availability_zone = "ap-northeast-3a"
   vpc_id            = module.vpc.vpc_id
   map_public_ip_on_launch = true
-
 }
 
 ## created another public subnet in a different availability zone
